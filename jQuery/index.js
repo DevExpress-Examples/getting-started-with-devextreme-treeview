@@ -1,27 +1,30 @@
 $(function(){
-    $("#simple-treeview").dxTreeView({ 
-        items: books,
-        searchEnabled: true,
-        selectByClick: true,
-        selectionMode: "single",
-        virtualModeEnabled: true,
-        itemTemplate: function(item) {
-          if (item.year) {
-            return "<div>" + item.text + " (" + item.year + ")" + "</div>";
-          } else {
-              return "<div>" + item.text + "</div>";
-          }
-        },
-        onItemClick: function(e) {
-          var clickedNode = e.itemData;
-          if (!clickedNode.items) {
-            var parentNode = e.node.parent;
-            $("#book-details").removeClass("hidden");
-            $("#book-details > .book").text(`${clickedNode.text} by ${parentNode.text}`);
-          } else {
-            $("#book-details").addClass("hidden");
-          }
+  $("#simple-treeview").dxTreeView({ 
+      dataSource: products,
+      dataStructure: "plain",
+      keyExpr: "ID",
+      displayExpr: "name",
+      parentIdExpr: "categoryId",
+      itemTemplate: function(item) {
+        if (item.price) {
+          return `<div> ${item.name} ($${item.price}) </div>`;
+        } else {
+          return `<div> ${item.name} </div>`;
         }
-    }).dxTreeView("instance");
+      },
+      searchEnabled: true,
+      selectionMode: "single",
+      selectByClick: true,        
+      onItemClick: function(e) {
+          const item = e.itemData;
+          if(item.price) {
+              $("#product-details").removeClass("hidden");
+              $("#product-details > img").attr("src", item.image);
+              $("#product-details > .name").text(item.name);
+              $("#product-details > .price").text("$" + item.price);
+          } else {
+              $("#product-details").addClass("hidden");
+          }
+      }
+  }).dxTreeView("instance");
 });
-

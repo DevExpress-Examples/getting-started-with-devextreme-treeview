@@ -1,42 +1,74 @@
 <template>
-<div id="app-container">
-    <div id="simple-treeview">
-        <TreeView
-          :data-source=books
-          @item-template="itemTemplate"
-          :search-enabled="true"
-          :select-by-click="true"
-          @on-item-click="displayBookAndAuthor"
-          selectionMode="single"
-          :virtual-mode-enabled="true" />
-      </div>
+    <DxTreeView
+      id="simple-treeview"
+      :data-source=products
+      dataStructure="plain"
+      keyExpr="ID"
+      displayExpr="name"
+      parentIdExpr="categoryId"
+      :search-enabled="true"
+      selectionMode="single"
+      :select-by-click="true"
+      :on-item-click="selectProduct" 
+    />
 
-      <div id="book-details" class="hidden">
-        <div class="book"></div>
-        <div class="author"></div> 
-      </div>
-  </div>
+    <div id="product-details" v-if="currentProduct.price">
+      <img :src="currentProduct.image" >
+      <div class="name">{{ currentProduct.name }}</div>
+      <div class="price">${{ currentProduct.price }}</div> 
+    </div>
+
 </template>
 
 <script>
-import TreeView from 'devextreme-react/tree-view';
-import  books from './books';
+import DxTreeView from 'devextreme-vue/tree-view';
+import products from './products';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    DxTreeView
+  },
+  data() {
+    return {
+      products: products,
+      currentProduct: products[0],
+    }
+  },
+  methods: {
+    selectProduct(e) {
+      this.currentProduct = e.itemData;
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+#simple-treeview, #product-details {
+    display: inline-block;
+    width: 300px;
+}
+
+#product-details {
+    vertical-align: top;
+    width: 400px;
+    height: 420px;
+    margin-left: 20px;
+}
+
+#product-details > img {
+    border: none;
+    height: 300px;
+    width: 400px;
+}
+
+#product-details > .name {
+    text-align: center;
+    font-size: 20px;
+}
+
+#product-details > .price {
+    text-align: center;
+    font-size: 24px;
 }
 </style>

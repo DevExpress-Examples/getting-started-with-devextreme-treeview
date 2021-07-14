@@ -1,0 +1,22 @@
+<dx-tree-view
+  id="simple-treeview"
+  [dataSource]="products"
+  dataStructure="plain"
+  keyExpr="ID"
+  displayExpr="name"
+  parentIdExpr="categoryId"
+  itemTemplate="productTemplate"
+  searchEnabled=true
+  selectionMode="single"
+  selectByClick=true
+  (onItemClick)="selectProduct($event)"
+>
+  <div *dxTemplate="let product of 'productTemplate'">
+    {{ product.price ? product.name + "(" + product.price + ")" : product.name }}
+  </div>
+</dx-tree-view>
+<div id="product-details" *ngIf="currentProduct.price">
+    <img [src]="currentProduct.image" />
+    <div class="name">{{currentProduct.name}}</div>
+    <div class="price">${{ currentProduct.price }}</div>
+</div>
