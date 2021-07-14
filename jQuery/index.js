@@ -26,5 +26,5 @@ $(function(){
             $("#product-details").addClass("hidden");
         }
       }
-  }).dxTreeView("instance");
+  });
 });
