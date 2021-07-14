@@ -9,7 +9,7 @@
   searchEnabled=true
   selectionMode="single"
   selectByClick=true
-  (onItemClick)="selectProduct($event)"
+  (onItemSelectionChanged)="selectProduct($event)"
 >
   <div *dxTemplate="let product of 'productTemplate'">
     {{ product.price ? product.name + "(" + product.price + ")" : product.name }}

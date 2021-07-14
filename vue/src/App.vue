@@ -1,23 +1,24 @@
 <template>
-    <DxTreeView
-      id="simple-treeview"
-      :data-source=products
-      dataStructure="plain"
-      keyExpr="ID"
-      displayExpr="name"
-      parentIdExpr="categoryId"
-      :search-enabled="true"
-      selectionMode="single"
-      :select-by-click="true"
-      :on-item-click="selectProduct" 
-    />
+    <div>
+      <DxTreeView
+        id="simple-treeview"
+        :data-source=products
+        dataStructure="plain"
+        keyExpr="ID"
+        displayExpr="name"
+        parentIdExpr="categoryId"
+        :search-enabled="true"
+        selectionMode="single"
+        :select-by-click="true"
+        @item-selection-changed="selectProduct" 
+      />
 
-    <div id="product-details" v-if="currentProduct.price">
-      <img :src="currentProduct.image" >
-      <div class="name">{{ currentProduct.name }}</div>
-      <div class="price">${{ currentProduct.price }}</div> 
+      <div id="product-details" v-if="currentProduct.price">
+        <img :src="currentProduct.image" >
+        <div class="name">{{ currentProduct.name }}</div>
+        <div class="price">${{ currentProduct.price }}</div> 
+      </div>
     </div>
-
 </template>
 
 <script>

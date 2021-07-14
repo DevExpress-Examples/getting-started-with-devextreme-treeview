@@ -33,7 +33,7 @@ function App() {
         searchEnabled={true}
         selectionMode="single"
         selectByClick={true}
-        onItemClick={selectProduct}
+        onItemSelectionChanged={selectProduct}
       />
 
       {

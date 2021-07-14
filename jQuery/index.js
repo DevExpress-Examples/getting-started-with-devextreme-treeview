@@ -15,16 +15,16 @@ $(function(){
       searchEnabled: true,
       selectionMode: "single",
       selectByClick: true,        
-      onItemClick: function(e) {
-          const item = e.itemData;
-          if(item.price) {
-              $("#product-details").removeClass("hidden");
-              $("#product-details > img").attr("src", item.image);
-              $("#product-details > .name").text(item.name);
-              $("#product-details > .price").text("$" + item.price);
-          } else {
-              $("#product-details").addClass("hidden");
-          }
+      onItemSelectionChanged: function(e) {
+        var selectedProduct = e.itemData;
+        if(selectedProduct.price) {
+            $("#product-details").removeClass("hidden");
+            $("#product-details > img").attr("src", selectedProduct.image);
+            $("#product-details > .price").text("$" + selectedProduct.price);
+            $("#product-details > .name").text(selectedProduct.name);
+        } else {
+            $("#product-details").addClass("hidden");
+        }
       }
   }).dxTreeView("instance");
 });
