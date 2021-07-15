@@ -1,17 +1,24 @@
 <template>
     <div>
       <DxTreeView
-        id="simple-treeview"
+        id="treeView"
         :data-source=products
         dataStructure="plain"
         keyExpr="ID"
         displayExpr="name"
         parentIdExpr="categoryId"
+        item-template="product-template"
         :search-enabled="true"
         selectionMode="single"
         :select-by-click="true"
         @item-selection-changed="selectProduct" 
-      />
+      >
+      
+        <template #product-template="item">
+          {{ item.data.price ? item.data.name + " ($" + item.data.price + ")" : item.data.name }}
+        </template>
+
+      </DxTreeView>
 
       <div id="product-details" v-if="currentProduct.price">
         <img :src="currentProduct.image" >
@@ -26,7 +33,6 @@ import DxTreeView from 'devextreme-vue/tree-view';
 import products from './products';
 
 export default {
-  name: 'App',
   components: {
     DxTreeView
   },
@@ -45,7 +51,7 @@ export default {
 </script>
 
 <style>
-#simple-treeview, #product-details {
+#treeView, #product-details {
     display: inline-block;
     width: 300px;
 }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Product, AppService } from './app.service';
+import { Product, ProductsService } from './products.service';
 
 @Component({
   selector: 'app-root',
@@ -11,10 +11,10 @@ export class AppComponent {
   products: Product[];
   currentProduct: Product;
 
-  constructor(service: AppService) {
+  constructor(service: ProductsService) {
       this.products = service.getProducts();
       this.currentProduct = this.products[0];
-  }
+  } 
 
   selectProduct(e) {
       this.currentProduct = e.itemData;

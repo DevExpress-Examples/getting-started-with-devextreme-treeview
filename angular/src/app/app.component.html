@@ -1,5 +1,5 @@
 <dx-tree-view
-  id="simple-treeview"
+  id="treeView"
   [dataSource]="products"
   dataStructure="plain"
   keyExpr="ID"
@@ -12,7 +12,7 @@
   (onItemSelectionChanged)="selectProduct($event)"
 >
   <div *dxTemplate="let product of 'productTemplate'">
-    {{ product.price ? product.name + "(" + product.price + ")" : product.name }}
+    {{ product.price ? product.name + " ($" + product.price + ")" : product.name }} 
   </div>
 </dx-tree-view>
 <div id="product-details" *ngIf="currentProduct.price">

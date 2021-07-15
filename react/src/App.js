@@ -21,9 +21,9 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div>
       <TreeView 
-        id="simple-treeview"
+        id="treeView"
         dataSource={products}
         dataStructure="plain"
         keyExpr="ID"

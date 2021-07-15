@@ -106,7 +106,7 @@ const products: Product[] = [{
 @Injectable({
   providedIn: 'root'
 })
-export class AppService {
+export class ProductsService {
   getProducts(): Product[] {
     return products;
   }

@@ -1,5 +1,5 @@
 $(function(){
-  $("#simple-treeview").dxTreeView({ 
+  $("#treeView").dxTreeView({ 
       dataSource: products,
       dataStructure: "plain",
       keyExpr: "ID",
