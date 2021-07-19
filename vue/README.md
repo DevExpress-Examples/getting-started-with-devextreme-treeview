@@ -1,4 +1,4 @@
-# vue
+# Getting Started with DevExtreme Treeview - vue
 
 ## Project setup
 ```

@@ -13,10 +13,11 @@ $(function(){
         }
       },
       searchEnabled: true,
+      searchMode: "startswith",
       selectionMode: "single",
       selectByClick: true,        
       onItemSelectionChanged: function(e) {
-        var selectedProduct = e.itemData;
+        const selectedProduct = e.itemData;
         if(selectedProduct.price) {
             $("#product-details").removeClass("hidden");
             $("#product-details > img").attr("src", selectedProduct.image);

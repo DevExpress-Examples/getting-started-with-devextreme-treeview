@@ -9,13 +9,14 @@
         parentIdExpr="categoryId"
         item-template="product-template"
         :search-enabled="true"
+        search-mode="startswith"
         selectionMode="single"
         :select-by-click="true"
         @item-selection-changed="selectProduct" 
       >
       
-        <template #product-template="item">
-          {{ item.data.price ? item.data.name + " ($" + item.data.price + ")" : item.data.name }}
+        <template #product-template="product">
+          {{ product.data.price ? product.data.name + " ($" + product.data.price + ")" : product.data.name }}
         </template>
 
       </DxTreeView>
@@ -51,31 +52,31 @@ export default {
 </script>
 
 <style>
-#treeView, #product-details {
-    display: inline-block;
-    width: 300px;
-}
+  #treeView, #product-details {
+      display: inline-block;
+      width: 300px;
+  }
 
-#product-details {
-    vertical-align: top;
-    width: 400px;
-    height: 420px;
-    margin-left: 20px;
-}
+  #product-details {
+      vertical-align: top;
+      width: 400px;
+      height: 420px;
+      margin-left: 20px;
+  }
 
-#product-details > img {
-    border: none;
-    height: 300px;
-    width: 400px;
-}
+  #product-details > img {
+      border: none;
+      height: 300px;
+      width: 400px;
+  }
 
-#product-details > .name {
-    text-align: center;
-    font-size: 20px;
-}
+  #product-details > .name {
+      text-align: center;
+      font-size: 20px;
+  }
 
-#product-details > .price {
-    text-align: center;
-    font-size: 24px;
-}
+  #product-details > .price {
+      text-align: center;
+      font-size: 24px;
+  }
 </style>

@@ -31,6 +31,7 @@ function App() {
         parentIdExpr="categoryId"
         itemTemplate={itemTemplate}
         searchEnabled={true}
+        searchMode="startswith"
         selectionMode="single"
         selectByClick={true}
         onItemSelectionChanged={selectProduct}

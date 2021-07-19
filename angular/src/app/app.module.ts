@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { DxTreeViewModule, DxTemplateModule } from 'devextreme-angular';
+import { DxTreeViewModule } from 'devextreme-angular';
 
 
 @NgModule({
@@ -11,8 +11,7 @@ import { DxTreeViewModule, DxTemplateModule } from 'devextreme-angular';
   ],
   imports: [
     BrowserModule,
-    DxTreeViewModule,
-    DxTemplateModule
+    DxTreeViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]
