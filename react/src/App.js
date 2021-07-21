@@ -6,18 +6,18 @@ import './App.css'
 import TreeView from 'devextreme-react/tree-view';
 import products from './products';
 
+const itemTemplate = (item) => {
+  if (item.price) {
+    return `<div> ${item.name} ($${item.price}) </div>`;
+  } else {
+    return `<div> ${item.name} </div>`;
+  }
+}
+
 function App() {
   const [selectedNode, setSelectedNode] = useState(products[0]);
   const selectProduct = (e) => {
     setSelectedNode(e.itemData);
-  }
-
-  const itemTemplate = (item) => {
-    if (item.price) {
-      return `<div> ${item.name} ($${item.price}) </div>`;
-    } else {
-      return `<div> ${item.name} </div>`;
-    }
   }
 
   return (
@@ -29,7 +29,7 @@ function App() {
         keyExpr="ID"
         displayExpr="name"
         parentIdExpr="categoryId"
-        itemTemplate={itemTemplate}
+        itemRender={itemTemplate}
         searchEnabled={true}
         searchMode="startswith"
         selectionMode="single"

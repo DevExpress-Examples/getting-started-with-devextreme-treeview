@@ -2,11 +2,11 @@
     <div>
       <DxTreeView
         id="treeView"
-        :data-source=products
+        :data-source="products"
         dataStructure="plain"
-        keyExpr="ID"
-        displayExpr="name"
-        parentIdExpr="categoryId"
+        key-expr="ID"
+        display-expr="name"
+        parent-id-expr="categoryId"
         item-template="product-template"
         :search-enabled="true"
         search-mode="startswith"

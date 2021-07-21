@@ -1,6 +1,7 @@
 const IMAGE_URL = "https://js.devexpress.com/Demos/WidgetsGallery/JSDemos/images/products/";
 
-const products = [{
+const products = [
+    {
         ID: "1",
         name: "Stores",
         expanded: true
