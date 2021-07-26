@@ -1,4 +1,4 @@
-# Getting Started with DevExtreme Treeview - React
+# Getting Started with DevExtreme TreeView - React
 
 This project was bootstrapped with [Create React App](https://github.com/faceproduct/create-react-app).
 

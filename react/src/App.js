@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import 'devextreme/dist/css/dx.common.css';
 import 'devextreme/dist/css/dx.light.css';
 import './App.css'
 
@@ -8,9 +7,9 @@ import products from './products';
 
 const itemTemplate = (item) => {
   if (item.price) {
-    return `<div> ${item.name} ($${item.price}) </div>`;
+    return `${item.name} ($${item.price})`;
   } else {
-    return `<div> ${item.name} </div>`;
+    return `${item.name}`;
   }
 }
 
