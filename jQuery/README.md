@@ -1,5 +1,4 @@
-# Getting Started with DevExtreme Treeview - jQuery
-
+# Getting Started with DevExtreme jQuery TreeView
 
 This repository stores jQuery source code for the [Getting Started with Treeview](https://js.devexpress.com/Documentation/Guide/UI_Components/HtmlEditor/Getting_Started_with_TreeVIew/) tutorial.
 

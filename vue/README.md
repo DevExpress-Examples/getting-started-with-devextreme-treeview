@@ -1,4 +1,6 @@
-# Getting Started with DevExtreme Treeview - vue
+# Getting Started with DevExtreme Vue TreeView
+
+This repository stores Vue source code for the [Getting Started with TreeView](https://js.devexpress.com/Documentation/Guide/UI_Components/TreeView/Getting_Started_with_TreeView/) tutorial.
 
 ## Project setup
 ```

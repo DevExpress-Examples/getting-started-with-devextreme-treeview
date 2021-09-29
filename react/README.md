@@ -1,4 +1,6 @@
-# Getting Started with DevExtreme TreeView - React
+# Getting Started with DevExtreme React TreeView 
+
+This repository stores React source code for the [Getting Started with TreeView](https://js.devexpress.com/Documentation/Guide/UI_Components/TreeView/Getting_Started_with_TreeView/) tutorial.
 
 This project was bootstrapped with [Create React App](https://github.com/faceproduct/create-react-app).
 
