@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Projects\workspace\getting-started-with-treeview_20.2.3+\angular\src\polyfills.ts */"hN/g");
+module.exports = __webpack_require__(/*! C:\Projects\workspace\getting-started-with-devextreme-treeview_20.2.3+\angular\src\polyfills.ts */"hN/g");
 
 
 /***/ }),
