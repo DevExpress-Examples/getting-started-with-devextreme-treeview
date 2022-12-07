@@ -15,7 +15,7 @@ This repository stores code examples of the TreeView component for the [Getting 
     - [app.component.html](angular/src/app/app.component.html)
     - [app.component.ts](angular/src/app/app.component.ts)
 - **jQuery**
-    - [index.js](jquery/src/index.js)
+    - [index.js](jQuery/src/index.js)
 - **React**
     - [App.js](react/src/App.js)
 - **Vue**
