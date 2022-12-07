@@ -4,7 +4,7 @@ This repository stores code examples of the jQuery TreeView component for the [G
 
 ## Installation
 
-Download the example and use NPM to install required libraries.
+Download the example and use NPM to install the required libraries.
 
 ```
 npm install
