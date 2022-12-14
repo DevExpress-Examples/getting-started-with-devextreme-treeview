@@ -1,7 +1,7 @@
 /**
 * DevExtreme (dx.common.css)
-* Version: 21.2.11
-* Build date: Tue Oct 18 2022
+* Version: 21.2.12
+* Build date: Fri Dec 09 2022
 *
 * Copyright (c) 2012 - 2022 Developer Express Inc. ALL RIGHTS RESERVED
 * Read about DevExtreme licensing here: https://js.devexpress.com/Licensing/
@@ -13,8 +13,8 @@ It is no longer required.
 @charset "UTF-8";
 /**
 * DevExtreme (dx.light.css)
-* Version: 21.2.11
-* Build date: Tue Oct 18 2022
+* Version: 21.2.12
+* Build date: Fri Dec 09 2022
 *
 * Copyright (c) 2012 - 2022 Developer Express Inc. ALL RIGHTS RESERVED
 * Read about DevExtreme licensing here: https://js.devexpress.com/Licensing/
@@ -4798,6 +4798,14 @@ It is no longer required.
   flex-grow: 1;
   border-radius: 0 4px 4px 0;
 }
+.dx-editor-outlined.dx-texteditor-with-label.dx-state-hover .dx-texteditor-label .dx-label {
+  -webkit-clip-path: inset(-12px -1px -1px 1px);
+  clip-path: inset(-12px -1px -1px 1px);
+}
+.dx-editor-outlined.dx-texteditor-with-label.dx-state-hover.dx-invalid .dx-texteditor-label .dx-label {
+  -webkit-clip-path: inset(-12px -1px -1px 1px);
+  clip-path: inset(-12px -1px -1px 1px);
+}
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty,
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty {
   border: 0;
@@ -4810,7 +4818,6 @@ It is no longer required.
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty .dx-texteditor-label .dx-label {
   border-bottom: 1px solid #ddd;
   border-top: 1px solid #ddd;
-  height: 100%;
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty .dx-texteditor-label .dx-label span,
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty .dx-texteditor-label .dx-label span {
@@ -4859,7 +4866,6 @@ It is no longer required.
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-invalid .dx-texteditor-label .dx-label {
   border-bottom: 1px solid rgba(217,83,79,.4);
   border-top: 1px solid rgba(217,83,79,.4);
-  height: 100%;
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-invalid .dx-texteditor-label .dx-label span,
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-invalid .dx-texteditor-label .dx-label span {
@@ -4908,7 +4914,6 @@ It is no longer required.
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-hover .dx-texteditor-label .dx-label {
   border-bottom: 1px solid rgba(51,122,183,.4);
   border-top: 1px solid rgba(51,122,183,.4);
-  height: 100%;
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-hover .dx-texteditor-label .dx-label span,
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-hover .dx-texteditor-label .dx-label span {
@@ -4956,9 +4961,13 @@ It is no longer required.
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-hover.dx-dropdowneditor-active .dx-texteditor-label .dx-label,
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-hover.dx-dropdowneditor-active .dx-texteditor-label .dx-label {
+  height: 100%;
   border-bottom: 1px solid rgba(51,122,183,.4);
   border-top: 0;
-  height: 100%;
+  border-left: 1px solid transparent;
+  margin-left: -1px;
+  -webkit-clip-path: inset(-12px -1px -1px 1px);
+  clip-path: inset(-12px -1px -1px 1px);
   padding: 0 2px;
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-hover.dx-dropdowneditor-active .dx-texteditor-label .dx-label span,
@@ -5009,7 +5018,6 @@ It is no longer required.
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-hover.dx-invalid .dx-texteditor-label .dx-label {
   border-bottom: 1px solid #d9534f;
   border-top: 1px solid #d9534f;
-  height: 100%;
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-hover.dx-invalid .dx-texteditor-label .dx-label span,
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-hover.dx-invalid .dx-texteditor-label .dx-label span {
@@ -5057,9 +5065,13 @@ It is no longer required.
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-dropdowneditor-active .dx-texteditor-label .dx-label,
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-dropdowneditor-active .dx-texteditor-label .dx-label {
+  height: 100%;
   border-bottom: 1px solid #ddd;
   border-top: 0;
-  height: 100%;
+  border-left: 1px solid transparent;
+  margin-left: -1px;
+  -webkit-clip-path: inset(-12px -1px -1px 1px);
+  clip-path: inset(-12px -1px -1px 1px);
   padding: 0 2px;
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-dropdowneditor-active .dx-texteditor-label .dx-label span,
@@ -5116,7 +5128,6 @@ It is no longer required.
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly .dx-texteditor-label .dx-label {
   border-bottom: 1px dashed #ddd;
   border-top: 1px dashed #ddd;
-  height: 100%;
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled .dx-texteditor-label .dx-label span,
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-readonly .dx-texteditor-label .dx-label span,
@@ -5183,7 +5194,6 @@ It is no longer required.
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-state-readonly.dx-state-hover .dx-texteditor-label .dx-label {
   border-bottom: 1px dashed rgba(51,122,183,.4);
   border-top: 1px dashed rgba(51,122,183,.4);
-  height: 100%;
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled.dx-state-readonly.dx-state-hover .dx-texteditor-label .dx-label span,
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-readonly.dx-state-readonly.dx-state-hover .dx-texteditor-label .dx-label span,
@@ -5286,7 +5296,6 @@ It is no longer required.
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-texteditor-empty.dx-state-readonly.dx-textarea.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label {
   border-bottom: 1px dashed #337ab7;
   border-top: 1px dashed #337ab7;
-  height: 100%;
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled.dx-state-focused .dx-texteditor-label .dx-label span,
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-lookup-empty.dx-state-disabled.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label span,
@@ -5433,9 +5442,13 @@ It is no longer required.
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-invalid .dx-texteditor-label .dx-label,
 .dx-editor-outlined.dx-texteditor-with-label.dx-invalid .dx-texteditor-label .dx-label {
+  height: 100%;
   border-bottom: 1px solid rgba(217,83,79,.4);
   border-top: 0;
-  height: 100%;
+  border-left: 1px solid transparent;
+  margin-left: -1px;
+  -webkit-clip-path: inset(-12px -1px -1px 1px);
+  clip-path: inset(-12px -1px -1px 1px);
   padding: 0 2px;
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-invalid .dx-texteditor-label .dx-label span,
@@ -5485,9 +5498,13 @@ It is no longer required.
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-readonly.dx-state-hover .dx-texteditor-label .dx-label,
 .dx-editor-outlined.dx-texteditor-with-label.dx-state-readonly.dx-state-hover .dx-texteditor-label .dx-label {
+  height: 100%;
   border-bottom: 1px dashed rgba(51,122,183,.4);
   border-top: 0;
-  height: 100%;
+  border-left: 1px dashed transparent;
+  margin-left: -1px;
+  -webkit-clip-path: inset(-12px -1px -1px 1px);
+  clip-path: inset(-12px -1px -1px 1px);
   padding: 0 2px;
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-readonly.dx-state-hover .dx-texteditor-label .dx-label span,
@@ -5543,9 +5560,13 @@ It is no longer required.
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-readonly .dx-texteditor-label .dx-label,
 .dx-editor-outlined.dx-texteditor-with-label.dx-state-disabled .dx-texteditor-label .dx-label,
 .dx-editor-outlined.dx-texteditor-with-label.dx-state-readonly .dx-texteditor-label .dx-label {
+  height: 100%;
   border-bottom: 1px dashed #ddd;
   border-top: 0;
-  height: 100%;
+  border-left: 1px dashed transparent;
+  margin-left: -1px;
+  -webkit-clip-path: inset(-12px -1px -1px 1px);
+  clip-path: inset(-12px -1px -1px 1px);
   padding: 0 2px;
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-disabled .dx-texteditor-label .dx-label span,
@@ -5664,9 +5685,13 @@ It is no longer required.
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-hover .dx-texteditor-label .dx-label,
 .dx-editor-outlined.dx-texteditor-with-label.dx-state-hover .dx-texteditor-label .dx-label {
+  height: 100%;
   border-bottom: 1px solid rgba(51,122,183,.4);
   border-top: 0;
-  height: 100%;
+  border-left: 1px solid transparent;
+  margin-left: -1px;
+  -webkit-clip-path: inset(-12px -1px -1px 1px);
+  clip-path: inset(-12px -1px -1px 1px);
   padding: 0 2px;
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-hover .dx-texteditor-label .dx-label span,
@@ -5716,9 +5741,13 @@ It is no longer required.
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-hover.dx-invalid .dx-texteditor-label .dx-label,
 .dx-editor-outlined.dx-texteditor-with-label.dx-state-hover.dx-invalid .dx-texteditor-label .dx-label {
+  height: 100%;
   border-bottom: 1px solid #d9534f;
   border-top: 0;
-  height: 100%;
+  border-left: 1px solid transparent;
+  margin-left: -1px;
+  -webkit-clip-path: inset(-12px -1px -1px 1px);
+  clip-path: inset(-12px -1px -1px 1px);
   padding: 0 2px;
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-state-hover.dx-invalid .dx-texteditor-label .dx-label span,
@@ -5798,9 +5827,13 @@ It is no longer required.
 .dx-editor-outlined.dx-texteditor-with-label.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label,
 .dx-editor-outlined.dx-texteditor-with-label.dx-textarea.dx-state-focused .dx-texteditor-label .dx-label,
 .dx-editor-outlined.dx-texteditor-with-label.dx-textarea.dx-state-focused.dx-state-hover .dx-texteditor-label .dx-label {
+  height: 100%;
   border-bottom: 1px solid #337ab7;
   border-top: 0;
-  height: 100%;
+  border-left: 1px solid transparent;
+  margin-left: -1px;
+  -webkit-clip-path: inset(-12px -1px -1px 1px);
+  clip-path: inset(-12px -1px -1px 1px);
   padding: 0 2px;
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-dropdowneditor-active.dx-state-focused .dx-texteditor-label .dx-label span,
@@ -5940,9 +5973,13 @@ It is no longer required.
 .dx-editor-outlined.dx-texteditor-with-label.dx-state-focused.dx-state-hover.dx-invalid .dx-texteditor-label .dx-label,
 .dx-editor-outlined.dx-texteditor-with-label.dx-textarea.dx-state-focused.dx-invalid .dx-texteditor-label .dx-label,
 .dx-editor-outlined.dx-texteditor-with-label.dx-textarea.dx-state-focused.dx-state-hover.dx-invalid .dx-texteditor-label .dx-label {
+  height: 100%;
   border-bottom: 1px solid #d9534f;
   border-top: 0;
-  height: 100%;
+  border-left: 1px solid transparent;
+  margin-left: -1px;
+  -webkit-clip-path: inset(-12px -1px -1px 1px);
+  clip-path: inset(-12px -1px -1px 1px);
   padding: 0 2px;
 }
 .dx-editor-outlined.dx-texteditor-with-floating-label.dx-dropdowneditor-active.dx-state-focused.dx-invalid .dx-texteditor-label .dx-label span,
@@ -12066,6 +12103,9 @@ It is no longer required.
 .dx-datagrid-content .dx-datagrid-table.dx-datagrid-table-fixed .dx-column-indicators .dx-sort.dx-sort-index {
   width: 26px;
 }
+.dx-datagrid-content .dx-datagrid-table .dx-datagrid-best-fit {
+  max-width: none!important;
+}
 .dx-datagrid-content .dx-datagrid-table .dx-datagrid-best-fit .dx-column-indicators {
   float: none!important;
 }
@@ -14134,6 +14174,9 @@ input.dx-hidden {
 .dx-treelist-content .dx-treelist-table.dx-treelist-table-fixed .dx-column-indicators .dx-sort.dx-sort-index {
   width: 26px;
 }
+.dx-treelist-content .dx-treelist-table .dx-treelist-best-fit {
+  max-width: none!important;
+}
 .dx-treelist-content .dx-treelist-table .dx-treelist-best-fit .dx-column-indicators {
   float: none!important;
 }
@@ -15999,11 +16042,14 @@ input.dx-hidden {
 .dx-treelist-rowsview.dx-treelist-nowrap .dx-treelist-table .dx-treelist-cell-expandable .dx-treelist-text-content {
   white-space: nowrap;
 }
+.dx-treelist-rowsview .dx-treelist-content .dx-treelist-table .dx-row .dx-editor-cell {
+  padding-left: 7px;
+}
 .dx-treelist-checkbox-size {
   line-height: 0;
 }
-.dx-treelist-cell-expandable .dx-checkbox,
-.dx-treelist-select-all .dx-checkbox {
+.dx-treelist-cell-expandable .dx-select-checkbox,
+.dx-treelist-select-all .dx-select-checkbox {
   position: absolute;
 }
 .dx-treelist-icon-container.dx-editor-inline-block {
@@ -16703,6 +16749,9 @@ input.dx-hidden {
 }
 .dx-pivotgridfieldchooser .dx-icon-hierarchy {
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAMUlEQVQoz2P4z4AfMlBXQcJ/EKShggQoxKEAojsBwxQqKUjACpEVoOhGNYVKCiiKLAATcARoA49V5wAAAABJRU5ErkJggg==") center center no-repeat;
+}
+.dx-pivotgridfieldchooser .dx-icon-hierarchy::before {
+  content: none;
 }
 .dx-rtl .dx-pivotgrid-fields-container .dx-position-indicator.dx-position-indicator-horizontal {
   margin-left: -3px;
