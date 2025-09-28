@@ -8,19 +8,19 @@
 
 This repository stores code examples of the TreeView component for the [Getting Started with TreeView](https://js.devexpress.com/Documentation/Guide/UI_Components/TreeView/Getting_Started_with_TreeView/) tutorial. The TreeView component displays a tree of text nodes from a local or remote source. This tutorial shows how to add the TreeView to a page, bind it to data, and configure its core features.
 
-<div align="center"><img src="./treeview.png" /></div>
+<div align="center"><img src="images/treeview.png" /></div>
 
 ## Files to Review
 
 - **Angular**
-    - [app.component.html](angular/src/app/app.component.html)
-    - [app.component.ts](angular/src/app/app.component.ts)
+    - [app.component.html](Angular/src/app/app.component.html)
+    - [app.component.ts](Angular/src/app/app.component.ts)
 - **jQuery**
     - [index.js](jQuery/index.js)
 - **React**
-    - [App.js](react/src/App.js)
+    - [App.js](React/src/App.js)
 - **Vue**
-    - [App.vue](vue/src/App.vue)
+    - [App.vue](Vue/src/App.vue)
 
 ## Documentation
 
