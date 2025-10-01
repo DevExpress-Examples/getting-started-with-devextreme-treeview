@@ -1,6 +1,6 @@
-const IMAGE_URL = 'https://js.devexpress.com/Demos/WidgetsGallery/JSDemos/images/products/';
+import type { Product } from './types';
 
-const products = [
+export const products: Product[] = [
   {
     ID: '1',
     name: 'Stores',
@@ -18,13 +18,13 @@ const products = [
     ID: '1_1_1_1',
     categoryId: '1_1_1',
     name: 'HD Video Player',
-    image: `${IMAGE_URL}1.png`,
+    image: '/images/1.png',
     price: 220,
   }, {
     ID: '1_1_1_2',
     categoryId: '1_1_1',
     name: 'SuperHD Video Player',
-    image: `${IMAGE_URL}2.png`,
+    image: '/images/2.png',
     price: 270,
   }, {
     ID: '1_1_2',
@@ -35,31 +35,31 @@ const products = [
     ID: '1_1_2_1',
     categoryId: '1_1_2',
     name: 'SuperLCD 42',
-    image: `${IMAGE_URL}7.png`,
+    image: '/images/7.png',
     price: 1200,
   }, {
     ID: '1_1_2_2',
     categoryId: '1_1_2',
     name: 'SuperLED 42',
-    image: `${IMAGE_URL}5.png`,
+    image: '/images/5.png',
     price: 1450,
   }, {
     ID: '1_1_2_3',
     categoryId: '1_1_2',
     name: 'SuperLED 50',
-    image: `${IMAGE_URL}4.png`,
+    image: '/images/4.png',
     price: 1600,
   }, {
     ID: '1_1_2_4',
     categoryId: '1_1_2',
     name: 'SuperLCD 55',
-    image: `${IMAGE_URL}6.png`,
+    image: '/images/6.png',
     price: 1750,
   }, {
     ID: '1_1_2_5',
     categoryId: '1_1_2',
     name: 'SuperLCD 70',
-    image: `${IMAGE_URL}9.png`,
+    image: '/images/9.png',
     price: 4000,
   }, {
     ID: '1_1_3',
@@ -73,7 +73,7 @@ const products = [
     ID: '1_1_3_1_1',
     categoryId: '1_1_3_1',
     name: 'DesktopLCD 19',
-    image: `${IMAGE_URL}10.png`,
+    image: '/images/10.png',
     price: 160,
   }, {
     ID: '1_1_4',
@@ -83,45 +83,13 @@ const products = [
     ID: '1_1_4_1',
     categoryId: '1_1_4',
     name: 'Projector Plus',
-    image: `${IMAGE_URL}14.png`,
+    image: '/images/14.png',
     price: 550,
   }, {
     ID: '1_1_4_2',
     categoryId: '1_1_4',
     name: 'Projector PlusHD',
-    image: `${IMAGE_URL}15.png`,
+    image: '/images/15.png',
     price: 750,
   },
 ];
-
-$(() => {
-  const treeView = $('#tree-view').dxTreeView({
-    dataSource: products,
-    dataStructure: 'plain',
-    keyExpr: 'ID',
-    displayExpr: 'name',
-    parentIdExpr: 'categoryId',
-    itemTemplate(item) {
-      if (item.price) {
-        return `<div> ${item.name} ($${item.price}) </div>`;
-      }
-      return `<div> ${item.name} </div>`;
-    },
-    searchEnabled: true,
-    searchMode: 'startswith',
-    selectionMode: 'single',
-    selectByClick: true,
-    onItemSelectionChanged(e) {
-      const selectedProduct = e.itemData;
-      if (selectedProduct.price) {
-        $('#product-details').removeClass('hidden');
-        $('#product-details > img').attr('src', selectedProduct.image);
-        $('#product-details > .price').text(`$${selectedProduct.price}`);
-        $('#product-details > .name').text(selectedProduct.name);
-        DevExpress.ui.notify(`Product selected: ${selectedProduct.name}`, 'success', 2000);
-      } else {
-        $('#product-details').addClass('hidden');
-      }
-    },
-  }).dxTreeView('instance');
-});

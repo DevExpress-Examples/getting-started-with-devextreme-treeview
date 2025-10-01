@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { ClickEvent } from 'devextreme/ui/button';
+import notify from 'devextreme/ui/notify';
+import { DxTreeViewTypes } from 'devextreme-angular/ui/tree-view';
+import { Product } from './app.types';
+import { ProductsService } from './products.service';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +10,21 @@ import { ClickEvent } from 'devextreme/ui/button';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'Angular';
+  products: Product[];
 
-  counter = 0;
+  currentProduct: Product | null = null;
 
-  buttonText = 'Click count: 0';
+  constructor(private readonly productsService: ProductsService) {
+    this.products = this.productsService.getProducts();
+  }
 
-  onClick(e: ClickEvent): void {
-    this.counter++;
-    this.buttonText = `Click count: ${this.counter}`;
+  selectProduct(e: DxTreeViewTypes.ItemSelectionChangedEvent): void {
+    const selectedProduct = e.itemData as Product;
+    if (selectedProduct?.price) {
+      this.currentProduct = selectedProduct;
+      notify(`Product selected: ${selectedProduct.name}`, 'success', 2000);
+    } else {
+      this.currentProduct = null;
+    }
   }
 }

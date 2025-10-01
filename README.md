@@ -16,11 +16,12 @@ This repository stores code examples of the TreeView component for the [Getting 
     - [app.component.html](Angular/src/app/app.component.html)
     - [app.component.ts](Angular/src/app/app.component.ts)
 - **jQuery**
-    - [index.js](jQuery/index.js)
+    - [index.js](jQuery/src/index.js)
 - **React**
-    - [App.js](React/src/App.js)
+    - [App.tsx](React/src/App.tsx)
 - **Vue**
     - [App.vue](Vue/src/App.vue)
+    - [TreeViewContent.vue](Vue/src/components/TreeViewContent.vue)
 
 ## Documentation
 

@@ -1,3 +1,29 @@
-<div class="default-style">
-  <dx-button [text]="buttonText" (onClick)="onClick($event)"></dx-button>
+<div id="app-container">
+  <dx-tree-view
+    id="tree-view"
+    [dataSource]="products"
+    dataStructure="plain"
+    keyExpr="ID"
+    displayExpr="name"
+    parentIdExpr="categoryId"
+    itemTemplate="productTemplate"
+    [searchEnabled]="true"
+    searchMode="startswith"
+    selectionMode="single"
+    [selectByClick]="true"
+    (onItemSelectionChanged)="selectProduct($event)"
+  >
+    <div *dxTemplate="let product of 'productTemplate'">
+      {{
+        product.price
+          ? product.name + " ($" + product.price + ")"
+          : product.name
+      }}
+    </div>
+  </dx-tree-view>
+  <div id="product-details" *ngIf="currentProduct && currentProduct.price">
+    <img [src]="currentProduct.image" [alt]="currentProduct.name" />
+    <div class="name">{{ currentProduct.name }}</div>
+    <div class="price">${{ currentProduct.price }}</div>
+  </div>
 </div>

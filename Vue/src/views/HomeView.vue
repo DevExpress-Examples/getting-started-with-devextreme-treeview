@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import HomeContent from '../components/HomeContent.vue';
+import TreeViewContent from '../components/TreeViewContent.vue';
 </script>
 
 <template>
-  <HomeContent text="Count"/>
+  <TreeViewContent/>
 </template>
 
