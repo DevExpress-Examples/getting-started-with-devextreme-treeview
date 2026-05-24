@@ -21,9 +21,11 @@
       }}
     </div>
   </dx-tree-view>
-  <div id="product-details" *ngIf="currentProduct && currentProduct.price">
+  @if (currentProduct && currentProduct.price) {
+  <div id="product-details">
     <img [src]="currentProduct.image" [alt]="currentProduct.name" />
     <div class="name">{{ currentProduct.name }}</div>
     <div class="price">${{ currentProduct.price }}</div>
   </div>
+  }
 </div>
