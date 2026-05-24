@@ -4,11 +4,13 @@ import { DxTreeViewTypes } from 'devextreme-angular/ui/tree-view';
 import { Product } from './app.types';
 import { ProductsService } from './products.service';
 
+import { DxTreeViewModule } from 'devextreme-angular/ui/tree-view';
+
 @Component({
     selector: 'app-root',
+    imports: [DxTreeViewModule],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
-    standalone: false
 })
 export class AppComponent {
   products: Product[];
