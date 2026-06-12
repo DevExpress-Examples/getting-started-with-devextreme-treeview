@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import notify from 'devextreme/ui/notify';
 import { DxTreeViewTypes } from 'devextreme-angular/ui/tree-view';
 import { Product } from './app.types';
@@ -10,6 +10,7 @@ import { DxTreeViewModule } from 'devextreme-angular/ui/tree-view';
     selector: 'app-root',
     imports: [DxTreeViewModule],
     templateUrl: './app.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
